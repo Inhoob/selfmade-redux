@@ -21,7 +21,7 @@ function App({ addSection }) {
     updateTitle("");
     updateEst(DefaultEst);
   };
-  const onChangeTitle = event => {
+  const onChangeTitle = (event) => {
     updateTitle(event.target.value);
   };
   const onChangeEst = ({ option }) => {
@@ -62,9 +62,7 @@ function App({ addSection }) {
         <SectionList />
       </Box>
       <Footer>
-        <Text size="xxsmall">
-          Time Keeper © Kim mintae. All right Reserved
-        </Text>
+        <Text size="xxsmall">Time Keeper</Text>
       </Footer>
     </>
   );
@@ -72,7 +70,7 @@ function App({ addSection }) {
 
 export default connect(
   () => {},
-  dispatch => ({
-    addSection: (title, est) => dispatch(addSection(title, est))
+  (dispatch) => ({
+    addSection: (title, est) => dispatch(addSection(title, est)),
   })
 )(App);
